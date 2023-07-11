@@ -1,43 +1,49 @@
-# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
+# Hexo 配置
+## 文档：https://hexo.io/docs/configuration.html
+## 源码：https://github.com/hexojs/hexo/
 
-# Site
+# --------------------------
+# 注意，修改该文件需要重启预览服务|
+# -------------------------
+
+# 主站配置
+# 标题
 title: Hexo
+# 子标题
 subtitle: 'Hello world'
-description: 'FOO'
+# 描述
+description: '阿尔菲的花匠'
+# 关键词（用于搜索引擎抓取，多个以空格隔开）
 keywords:
-author: Arfies
+# 作者
+author: '阿尔菲的花匠'
+
+
+# -------------- 系统配置 --------------
+
+# 语言
 language: zh
+# 时区
 timezone: 'Asia/Shanghai'
 
-
-# URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+# 链接配置
+## 主站地址，如果你使用GitHub Page，请设置为类似地址： 'https://username.github.io/project'
 url: http://example.com
+
+# 文章链接格式
 permalink: /:year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: true # 去除主页链接中的 “index.html”
+  trailing_html: true # 去除地址中末尾的 “.html”
 
-# Directory
-source_dir: source
-public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-i18n_dir: :lang
-skip_render:
-
-# Writing
-new_post_name: :title.md # File name of new posts
-default_layout: post
-titlecase: false # Transform title into titlecase
+# 编写文章
+new_post_name: :title.md # 新文件格式
+default_layout: post # 默认文章页面模板
+titlecase: false # 转换标题大消息为英文的 titlecase
 external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
+  enable: true # 在新窗口打开外链
+  field: site # 对全站启用
   exclude: ''
 filename_case: 0
 render_drafts: false
@@ -57,44 +63,54 @@ prismjs:
   line_number: true
   tab_replace: ''
 
-# Home page setting
-# path: Root path for your blogs index page. (default = '')
-# per_page: Posts displayed per page. (0 = disable pagination)
-# order_by: Posts order. (Order by date descending by default)
+# 主页配置
+# path：网站主页根链接（默认为空：''）
+# per_page：主页文章数量（0 为禁止分页）
+# order_by：文章顺序（默认按日期倒序）
 index_generator:
   path: ''
   per_page: 10
   order_by: -date
 
-# Category & Tag
+# 分类和标签配置
 default_category: uncategorized
 category_map:
 tag_map:
 
-# Metadata elements
+# 元数据节点
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
 
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
+# 时间日期格式
+## Hexo 使用了 Moment.js 来解析时间格式
+## 详细的格式内容可以在下面的链接中找到
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
 updated_option: 'mtime'
 
-# Pagination
-## Set per_page to 0 to disable pagination
+# 分页（几篇文章为一页）
+## 设置数量为 0 取消分页
 per_page: 10
 pagination_dir: page
 
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
+# 扩展
+## 插件: https://hexo.io/plugins/
+## 主题: https://hexo.io/themes/
 theme: cupertino
 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
+# 部署
+## 文档地址: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# 源文件位置
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:

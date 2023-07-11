@@ -1,0 +1,6 @@
+[submodule "themes/hexo-theme-cupertino"]
+	path = themes/hexo-theme-cupertino
+	url = https://github.com/MrWillCom/hexo-theme-cupertino.git
+[submodule "themes/cupertino"]
+	path = themes/cupertino
+	url = https://github.com/SinarPandora/hexo-theme-cupertino.git
